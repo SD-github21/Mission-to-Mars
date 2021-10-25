@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mission to Mars</title>
+    <link 
+      rel="stylesheet" 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <style>
+      img {
+        border: 2px solid #db6464;
+        padding: 5px;
+      }
+      img:hover {
+        box-shadow: 5px 4px 10px #8B0000;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+    <h6><strong>Gustav Holst - The Planets, Op. 32 - Movement 1 "Mars, The Bringer of War"</strong></h6> 
+    <h6>Courtesy of https://commons.wikimedia.org/wiki/File:Gustav_Holst_-_the_planets,_op._32_-_i._mars,_the_bringer_of_war.ogg</h6>
+    <h6>Credited to http://www.musopen.com/faq.html</h6>
+    <h6><em>First click on the "Scrape New Data" button and then enjoy this music celebrating Mars! Wait for it...it takes a few seconds to load and the music starts very softly!!</em></h6>
+    <iframe src="https://commons.wikimedia.org/wiki/File:Gustav_Holst_-_the_planets,_op._32_-_i._mars,_the_bringer_of_war.ogg?embedplayer=yes" width="250" height="30" frameborder="0"></iframe>
+    </div>
+    <div class="container">
+        <!-- Add Jumbotron to Header -->
+        <div class="jumbotron text-center">
+            <h1 class="bg-danger"><strong>Mission to Mars</strong></h1>
+            <!-- Add a button to activate scraping script -->
+            <p><a class="btn btn-danger btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        </div>
+        <!-- Add section for Mars News -->
+        <div class="row" id="mars-news">
+            <div class="col-md-12">
+                <div class="media">
+                    <div class="media-body">
+                        <h2 class="media-heading bg-danger lead" style="text-align:center";><u><strong>LATEST MARS NEWS</strong></u></h2>
+                        <h5 class="media-heading bg-danger lead" style="text-align:center";>{{mars.news_title}}</h5>
+                        <p  class="bg-danger lead">{{mars.news_paragraph}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section for Mars Featured Image and Facts table -->     
+        <div class="row" id="mars-featured-image">
+            <div class="col-md-8">
+                <h2><u><strong>Featured Mars Image</strong></u></h2>
+                <img 
+                  src="{{mars.featured_image}}" 
+                  class="img-responsive" 
+                  alt="Responsive image"
+                />
+            </div>
+            <div class="col-md-4">
+              <!-- Mars Facts -->
+              <div class="row" id="mars-facts">
+                <h4><u><strong>Mars Facts</strong></u></h4>
+                {{mars.facts  |  safe}}
+              </div>
+            </div>
+        </div>
+        <!-- Section for Hemispheres Featured Images -->
+        <div class="row" id="mars-hemispheres">
+          <h2 class="bg-danger" style="text-align:center";><u><strong>Mars Hemispheres</strong></u></h2>          
+            {% for hemisphere in mars.hemispheres %}
+          <div class="col-md-3">
+            <a target="_blank" href="{{hemisphere["img_url"]}}">
+              <img
+               src="{{hemisphere["img_url"]}}"
+               class="img-responsive"
+               alt="Responsive image"
+              width="200"
+              />
+            </a> 
+            <h4>{{hemisphere["title"]}}</h4>
+          </div>
+            {% endfor %}
+        </div>
+    </div>   
+</body>
+</html>

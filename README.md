@@ -9,7 +9,7 @@ The purpose of the Mission-to-Mars analysis was to develop an automated program 
     - A color design scheme incorporating Mars' reddish tint was developed and implemented to provide aesthetic interest to the webpage (e.g., borders around images, background banners of color)
     - Font styling using bold, underline, and italics was added to key headers to help demarcate the various sections of the website
     - The four hemispheres of Mars were converted to thumbnail images with shadow backgrounds so that users can click to view the hemispheres' full-size images
-    - A music feature was added to the top of the webpage so that users can have a unique multi-sensory experience of viewing beautiful images of Mars, learning important news and facts about Mars, and listening to the incredibly powerful and inspiring first movement of Gustav Holst's "The Planets", entitled "Mars, the Bringer of War", which celebrates Mars in all its glory   
+    - A music feature was added to the top of the webpage so that users can have a unique multi-sensory experience of viewing beautiful images of Mars, learning important news and facts about Mars, and listening to the incredibly powerful and inspiring first orchestral movement of Gustav Holst's "The Planets", entitled "Mars, the Bringer of War", which celebrates Mars in all its glory   
 
 
 ## Resources

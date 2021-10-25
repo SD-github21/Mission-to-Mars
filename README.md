@@ -1,7 +1,7 @@
 # Mission-to-Mars
 
 ## Overview of Mission-to-Mars
-The purpose of the Mission-to-Mars analysis was to develop an automated program to "scrape" relevant and interesting data from NASA Mars websites, save the data into a Mongo database, and create a web app to display the data in a coherent, organized, and visually-pleasing manner. Below are the steps of this web-scraping data analysis process:
+The purpose of the Mission-to-Mars analysis was to develop an automated program to "scrape" relevant and interesting data from various websites about Mars, save the data into a Mongo database, and create a web app to display the data in a coherent, organized, and visually-pleasing manner. Below are the steps of this web-scraping data analysis process:
 
   - Data from several websites, i.e., recent news about Mars from NASA, a featured image of Mars from the Jet Propulsion Laboratory, a table of Mars facts, and images of the four hemispheres of Mars, were identified as the key components of interest to scrape. 
   - A web app was built to develop an automated program that will scrape these data each time it is run.
